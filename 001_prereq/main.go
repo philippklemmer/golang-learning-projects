@@ -1,9 +1,9 @@
 /*
-Going trough the Udemy Course of 'Webdevelopment with Go.
-Doing the first exercises in this file.
-This only used for improving Golang Language purposes.
+	--- Udemy Course ---
+	This is "Hands On 1" of the learning webdevelopment with GoLang
+	from GoesToEleven
+	https://github.com/GoesToEleven/golang-web-dev/tree/master/001_prereq
 */
-
 package main
 
 import (
@@ -39,6 +39,8 @@ func (s Square) area() float64 {
 }
 
 func main () {
+	fmt.Println("Hello to Preperation 1 of Learn Webdevelopment with Golang")
+	
 	sq := Square{20,20}
 	rt := Reactangle{30,20} 
 	
