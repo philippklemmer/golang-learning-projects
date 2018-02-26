@@ -10,7 +10,6 @@ import (
 	"fmt"
 	"time"
 	"os"
-	"os/exec"
 	"io"
 	"log"
 	"strings"
@@ -30,7 +29,7 @@ func createDataSet(name string, timestamp string) string {
 			<title>Welcome ` + name +`</title>
 		</head>
 		<body>
-			<h1>Welcome ` + name + `! Your logged in @` + timestamp +`
+			<h1>Welcome ` + name + `! You logged in @` + timestamp +`
 		</body>
 		</html>
 	`
@@ -77,6 +76,6 @@ func main() {
 	writeDataToFile("index.html", data)
 
 	fmt.Println("open new file in browser")
-	exec.Command("firefox", "index.html").Output()
+	os.exec.Command("firefox", "index.html").Output()
 
 }
