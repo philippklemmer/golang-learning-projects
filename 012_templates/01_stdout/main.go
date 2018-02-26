@@ -1,6 +1,6 @@
 /*
 	--- Udemy Course ---
-	This is "Learn about Templates in Go Part 2.0" of the learning webdevelopment with GoLang
+	This is "Learn about Templates in Go Part 2.00" of the learning webdevelopment with GoLang
 	from GoesToEleven
 	https://github.com/GoesToEleven/golang-web-dev/tree/master/
 */

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <ul>
+        {{range .Wisdom}}
+            <li>{{.Name}} - {{.Motto}}</li>
+        {{end}}
+    </ul>
+
+    <ul>
+        {{range .Fluffys}}
+            <li>{{.Name}} - {{.Color}} - {{.Tone}}</li>
+        {{end}}
+    </ul>
+</body>
+</html>
