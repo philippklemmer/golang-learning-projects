@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+
+    DATA {{.}}
+
+    {{$data := index . 0}}
+
+    EXAMPLE 1 - Get the index
+    {{index $data 2}}
+    {{index $data 1}}
+    {{index $data 0}}
+
+    EXAMPLE 2 - Conditions
+    {{range $data}}
+        {{if .Admin}}
+            {{.}}
+        {{end}}
+    {{end}}
+
+    EXAMPLE 3 - and
+    {{range $data}}
+        {{if and .Name .Job}}
+            {{.}}
+        {{end}}
+    {{end}}
+
+    {{$numbers := index . 1}}
+    {{ range $numbers}}
+        <p>{{.}} is lower then 5: {{lt . 5}}</p>
+        <p>{{.}} is equals 5: {{eq . 5}}</p>
+        <p>{{.}} is lower then 5: {{gt . 5}}</p>
+    {{end}}
+</body>
+</html>
