@@ -9,29 +9,26 @@
 
     DATA {{.}}
 
-    {{$data := index . 0}}
-
     EXAMPLE 1 - Get the index
-    {{index $data 2}}
-    {{index $data 1}}
-    {{index $data 0}}
+    {{index .users 2}}
+    {{index .users 1}}
+    {{index .users 0}}
 
     EXAMPLE 2 - Conditions
-    {{range $data}}
+    {{range .users}}
         {{if .Admin}}
             {{.}}
         {{end}}
     {{end}}
 
     EXAMPLE 3 - and
-    {{range $data}}
+    {{range .users}}
         {{if and .Name .Job}}
             {{.}}
         {{end}}
     {{end}}
 
-    {{$numbers := index . 1}}
-    {{ range $numbers}}
+    {{ range .numbers}}
         <p>{{.}} is lower then 5: {{lt . 5}}</p>
         <p>{{.}} is equals 5: {{eq . 5}}</p>
         <p>{{.}} is lower then 5: {{gt . 5}}</p>

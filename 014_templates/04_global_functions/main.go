@@ -48,9 +48,15 @@ func main() {
 	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	users := []person{philipp, jakub, kostek}
 
-	data := []interface{}{
-		users,
-		numbers,
+	/*
+		type interface
+		- interfaces are like objects in js
+			- you can put anything inside it
+		- useful with JSON Data
+	*/
+	data := map[string]interface{}{
+		"users":   users,
+		"numbers": numbers,
 	}
 
 	err := tpl.Execute(os.Stdout, data)
