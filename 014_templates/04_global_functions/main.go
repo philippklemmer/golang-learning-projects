@@ -53,10 +53,19 @@ func main() {
 		- interfaces are like objects in js
 			- you can put anything inside it
 		- useful with JSON Data
+
+		data := map[string]interface{}{
+			"users":   users,
+			"numbers": numbers,
+		}
 	*/
-	data := map[string]interface{}{
-		"users":   users,
-		"numbers": numbers,
+
+	data := struct {
+		Users   []person
+		Numbers []int
+	}{
+		Users:   users,
+		Numbers: numbers,
 	}
 
 	err := tpl.Execute(os.Stdout, data)

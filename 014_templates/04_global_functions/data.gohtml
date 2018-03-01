@@ -10,25 +10,25 @@
     DATA {{.}}
 
     EXAMPLE 1 - Get the index
-    {{index .users 2}}
-    {{index .users 1}}
-    {{index .users 0}}
+    {{index .Users 2}}
+    {{index .Users 1}}
+    {{index .Users 0}}
 
     EXAMPLE 2 - Conditions
-    {{range .users}}
+    {{range .Users}}
         {{if .Admin}}
             {{.}}
         {{end}}
     {{end}}
 
     EXAMPLE 3 - and
-    {{range .users}}
+    {{range .Users}}
         {{if and .Name .Job}}
             {{.}}
         {{end}}
     {{end}}
 
-    {{ range .numbers}}
+    {{ range .Numbers}}
         <p>{{.}} is lower then 5: {{lt . 5}}</p>
         <p>{{.}} is equals 5: {{eq . 5}}</p>
         <p>{{.}} is lower then 5: {{gt . 5}}</p>
