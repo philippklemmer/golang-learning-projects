@@ -15,10 +15,11 @@ import (
 )
 
 type course struct {
-	Number, Name, Units string
+	Number, Name string
+	Units        int
 }
 
-func (c course) dashToColon() string {
+func (c course) DashToColon() string {
 	return strings.Join(strings.Split(c.Number, "-"), ":")
 }
 
@@ -43,17 +44,17 @@ func main() {
 		Fall: semester{
 			Term: "Fall",
 			Courses: []course{
-				course{"CSCI-40", "Introduction to Programming in Go", "4"},
-				course{"CSCI-130", "Introduction to Web Programming with Go", "4"},
-				course{"CSCI-140", "Mobile Apps Using Go", "4"},
+				course{"CSCI-40", "Introduction to Programming in Go", 4},
+				course{"CSCI-130", "Introduction to Web Programming with Go", 4},
+				course{"CSCI-140", "Mobile Apps Using Go", 4},
 			},
 		},
 		Spring: semester{
 			Term: "Spring",
 			Courses: []course{
-				course{"CSCI-50", "Advanced Go", "5"},
-				course{"CSCI-190", "Advanced Web Programming with Go", "5"},
-				course{"CSCI-191", "Advanced Mobile Apps With Go", "5"},
+				course{"CSCI-50", "Advanced Go", 5},
+				course{"CSCI-190", "Advanced Web Programming with Go", 5},
+				course{"CSCI-191", "Advanced Mobile Apps With Go", 5},
 			},
 		},
 	}

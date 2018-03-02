@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gramercy Tavern</title>
+</head>
+<body>
+    <h1>Menu Card of Gramercy Tavern</h1>
+
+    {{range .}}
+        <h2>{{.Name}}</h2>
+        <ul>
+            {{range .Food}}
+                <li>
+                    <h3>{{.Name}}</h3>
+                    <p>{{.Description}}</p>
+                    <p>Price: {{.Price}}$</p>
+                    {{if .Vegan}}
+                        <p>Vegan</p>
+                    {{end}}
+                </li>
+            {{end}}
+        </ul>
+    {{end}}
+</body>
+</html>

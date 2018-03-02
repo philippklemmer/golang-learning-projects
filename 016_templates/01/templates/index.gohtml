@@ -10,8 +10,7 @@
     <h2>{{.Fall.Term}}</h2>
     <ul>
         {{range .Fall.Courses}}
-        {{.Number}}
-        <li>{{.dashToColon}} - {{.Name}} - {{.Units}}</li>
+        <li>{{.DashToColon}} - {{.Name}} - {{.Units}}</li>
         {{end}}
     </ul>
 

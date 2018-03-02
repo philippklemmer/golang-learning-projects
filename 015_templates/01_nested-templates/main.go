@@ -13,6 +13,15 @@ import (
 	"text/template"
 )
 
+type person struct {
+	Name string
+	Age  int
+}
+
+func (p person) Agedouble() int {
+	return p.Age * 2
+}
+
 var tpl *template.Template
 
 func init() {
@@ -20,7 +29,13 @@ func init() {
 }
 
 func main() {
-	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", 42)
+
+	philipp := person{
+		Name: "philipp",
+		Age:  23,
+	}
+
+	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", philipp)
 	if err != nil {
 		log.Fatalln(err)
 	}
